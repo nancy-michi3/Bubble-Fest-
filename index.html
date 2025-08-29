@@ -228,7 +228,7 @@
                     <p class="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Con <span class="font-semibold text-purple-600">amplia experiencia</span> transformando celebraciones en La Piedad, 
                         somos el equipo de confianza que ha decorado <span class="font-semibold text-pink-600">cientos de eventos especiales</span> 
-                        en nuestra hermosa ciudad michoacana.
+                        en nuestra hermosa ciudad.
                     </p>
                 </div>
                 
@@ -280,6 +280,53 @@
                 </div>
             </div>
 
+            <!-- Social Media Section -->
+            <div class="bg-gradient-to-br from-pink-50 via-purple-50 to-blue-50 rounded-2xl p-8 shadow-lg border border-gray-100 mb-16">
+                <div class="text-center mb-8">
+                    <h3 class="text-3xl font-bold text-gray-800 mb-4">¡Síguenos en Redes Sociales! 📱</h3>
+                    <p class="text-lg text-gray-600 max-w-2xl mx-auto leading-relaxed">
+                        Descubre nuestras últimas decoraciones, tips de decoración y mantente al día con las tendencias más coloridas. 
+                        <span class="font-semibold text-purple-600">¡No te pierdas ninguna inspiración!</span>
+                    </p>
+                </div>
+                
+                <div class="grid md:grid-cols-2 gap-8 max-w-2xl mx-auto">
+                    <!-- Facebook -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-500 hover:bg-gradient-to-br hover:from-blue-500 hover:to-blue-600 hover:text-white hover:shadow-2xl hover:scale-105 cursor-pointer group">
+                        <div class="text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-blue-600 rounded-full mb-6 transition-all duration-300 group-hover:bg-white group-hover:text-blue-600 group-hover:scale-110">
+                                <svg class="w-8 h-8 text-white group-hover:text-blue-600 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-3 transition-colors duration-300 group-hover:text-white">Facebook</h4>
+                            <p class="text-gray-600 mb-6 transition-colors duration-300 group-hover:text-blue-100">Fotos de nuestros trabajos y eventos especiales</p>
+                            <button onclick="openFacebook()" 
+                                    class="bg-blue-600 hover:bg-white hover:text-blue-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group-hover:bg-white group-hover:text-blue-600">
+                                👍 Seguir en Facebook
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Instagram -->
+                    <div class="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 transition-all duration-500 hover:bg-gradient-to-br hover:from-pink-500 hover:to-purple-600 hover:text-white hover:shadow-2xl hover:scale-105 cursor-pointer group">
+                        <div class="text-center">
+                            <div class="inline-flex items-center justify-center w-16 h-16 bg-gradient-to-br from-pink-500 to-purple-600 rounded-full mb-6 transition-all duration-300 group-hover:bg-white group-hover:scale-110">
+                                <svg class="w-8 h-8 text-white group-hover:text-pink-500 transition-colors duration-300" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+                                </svg>
+                            </div>
+                            <h4 class="text-xl font-semibold text-gray-800 mb-3 transition-colors duration-300 group-hover:text-white">Instagram</h4>
+                            <p class="text-gray-600 mb-6 transition-colors duration-300 group-hover:text-pink-100">Stories, reels y contenido exclusivo diario</p>
+                            <button onclick="openInstagram()" 
+                                    class="bg-gradient-to-r from-pink-500 to-purple-600 hover:bg-white hover:text-pink-500 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group-hover:bg-white group-hover:text-pink-500">
+                                📸 Seguir en Instagram
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Call to Action -->
             <div class="text-center bg-gradient-to-r from-purple-600 to-pink-600 rounded-2xl p-8 text-white">
                 <h3 class="text-2xl font-bold mb-4">¿Tienes una fecha especial?</h3>
@@ -319,6 +366,14 @@
             const message = encodeURIComponent("¡Hola! Me interesa conocer más sobre sus servicios de decoración con globos para mi evento. ¿Podrían ayudarme con información y cotización?");
             const url = `https://wa.me/52${number}?text=${message}`;
             window.open(url, '_blank');
+        }
+
+        function openFacebook() {
+            window.open('https://www.facebook.com/share/1C8owHraZ5/?mibextid=wwXIfr', '_blank');
+        }
+
+        function openInstagram() {
+            window.open('https://www.instagram.com/bubblefestlapiedad?igsh=NXZjYmVocXZ4MTZr', '_blank');
         }
 
         // Progress bar functionality
@@ -536,7 +591,7 @@
             document.head.appendChild(style);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976ce4a65606b829',t:'MTc1NjQ3OTM2Ni4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976cf87f03fc7508',t:'MTc1NjQ4MDE3OS4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
 
