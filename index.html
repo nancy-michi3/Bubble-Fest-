@@ -319,7 +319,8 @@
                             <h4 class="text-xl font-semibold text-gray-800 mb-3 transition-colors duration-300 group-hover:text-white">Instagram</h4>
                             <p class="text-gray-600 mb-6 transition-colors duration-300 group-hover:text-pink-100">Stories, reels y contenido exclusivo diario</p>
                             <button onclick="openInstagram()" 
-                                    class="bg-gradient-to-r from-pink-500 to-purple-600 hover:bg-white hover:text-pink-500 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group-hover:bg-white group-hover:text-pink-500">
+                                    class="bg-gradient-to-r from-pink-500 to-purple-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl group-hover:bg-white group-hover:text-pink-500"
+                                    style="background-image: linear-gradient(to right, #ec4899, #9333ea);">
                                 📸 Seguir en Instagram
                             </button>
                         </div>
@@ -472,9 +473,19 @@
                                 card.style.background = 'linear-gradient(135deg, #10b981, #059669)';
                                 card.style.color = 'white';
                                 card.style.transform = 'scale(1.05)';
-                                // Make all text white
+                                // Make all text white including titles, numbers and buttons
                                 const allText = card.querySelectorAll('h3, p, button');
-                                allText.forEach(el => el.style.color = 'white');
+                                allText.forEach(el => {
+                                    el.style.color = 'white';
+                                    el.style.setProperty('color', 'white', 'important');
+                                });
+                                // Make button text white too
+                                const buttons = card.querySelectorAll('button');
+                                buttons.forEach(btn => {
+                                    btn.style.color = 'white';
+                                    btn.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                                    btn.style.border = '2px solid white';
+                                });
                             } else if (card.querySelector('svg') && card.querySelector('svg').viewBox === '0 0 24 24') {
                                 // Social media cards
                                 if (card.textContent.includes('Facebook')) {
@@ -482,15 +493,37 @@
                                     card.style.color = 'white';
                                     card.style.transform = 'scale(1.05)';
                                     // Make all text white
-                                    const allText = card.querySelectorAll('h4, p');
-                                    allText.forEach(el => el.style.color = 'white');
+                                    const allText = card.querySelectorAll('h4, p, button');
+                                    allText.forEach(el => {
+                                        el.style.color = 'white';
+                                        el.style.setProperty('color', 'white', 'important');
+                                    });
+                                    // Make button text white too
+                                    const buttons = card.querySelectorAll('button');
+                                    buttons.forEach(btn => {
+                                        btn.style.color = 'white';
+                                        btn.style.backgroundColor = 'rgba(255,255,255,0.2)';
+                                        btn.style.border = '2px solid white';
+                                    });
                                 } else if (card.textContent.includes('Instagram')) {
                                     card.style.background = 'linear-gradient(135deg, #ec4899, #9333ea)';
                                     card.style.color = 'white';
                                     card.style.transform = 'scale(1.05)';
                                     // Make all text white
                                     const allText = card.querySelectorAll('h4, p');
-                                    allText.forEach(el => el.style.color = 'white');
+                                    allText.forEach(el => {
+                                        el.style.color = 'white';
+                                        el.style.setProperty('color', 'white', 'important');
+                                    });
+                                    // Make button white with pink text
+                                    const buttons = card.querySelectorAll('button');
+                                    buttons.forEach(btn => {
+                                        btn.style.setProperty('color', '#ec4899', 'important');
+                                        btn.style.setProperty('background-color', 'white', 'important');
+                                        btn.style.setProperty('background', 'white', 'important');
+                                        btn.style.setProperty('background-image', 'none', 'important');
+                                        btn.style.setProperty('border', '2px solid white', 'important');
+                                    });
                                 }
                             } else {
                                 // Service cards get random colorful gradients
@@ -506,7 +539,10 @@
                                 card.style.transform = 'scale(1.05)';
                                 // Make all text white
                                 const allText = card.querySelectorAll('h4, p');
-                                allText.forEach(el => el.style.color = 'white');
+                                allText.forEach(el => {
+                                    el.style.color = 'white';
+                                    el.style.setProperty('color', 'white', 'important');
+                                });
                             }
                             
                             // Burst of confetti
@@ -522,9 +558,18 @@
                                 card.style.background = '';
                                 card.style.color = '';
                                 card.style.transform = '';
-                                // Reset text colors
+                                // Reset text colors and button styles
                                 const allText = card.querySelectorAll('h3, h4, p, button');
-                                allText.forEach(el => el.style.color = '');
+                                allText.forEach(el => {
+                                    el.style.color = '';
+                                    el.style.removeProperty('color');
+                                });
+                                // Reset button styles
+                                const buttons = card.querySelectorAll('button');
+                                buttons.forEach(btn => {
+                                    btn.style.backgroundColor = '';
+                                    btn.style.border = '';
+                                });
                                 triggeredElements.delete(index);
                             }
                         }
@@ -645,7 +690,7 @@
             document.head.appendChild(style);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976d0b2c15175dcb',t:'MTc1NjQ4MDk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976d175e0427db57',t:'MTc1NjQ4MTQ0My4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
 
 
