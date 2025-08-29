@@ -472,16 +472,25 @@
                                 card.style.background = 'linear-gradient(135deg, #10b981, #059669)';
                                 card.style.color = 'white';
                                 card.style.transform = 'scale(1.05)';
+                                // Make all text white
+                                const allText = card.querySelectorAll('h3, p, button');
+                                allText.forEach(el => el.style.color = 'white');
                             } else if (card.querySelector('svg') && card.querySelector('svg').viewBox === '0 0 24 24') {
                                 // Social media cards
                                 if (card.textContent.includes('Facebook')) {
                                     card.style.background = 'linear-gradient(135deg, #3b82f6, #1d4ed8)';
                                     card.style.color = 'white';
                                     card.style.transform = 'scale(1.05)';
+                                    // Make all text white
+                                    const allText = card.querySelectorAll('h4, p');
+                                    allText.forEach(el => el.style.color = 'white');
                                 } else if (card.textContent.includes('Instagram')) {
                                     card.style.background = 'linear-gradient(135deg, #ec4899, #9333ea)';
                                     card.style.color = 'white';
                                     card.style.transform = 'scale(1.05)';
+                                    // Make all text white
+                                    const allText = card.querySelectorAll('h4, p');
+                                    allText.forEach(el => el.style.color = 'white');
                                 }
                             } else {
                                 // Service cards get random colorful gradients
@@ -495,6 +504,9 @@
                                 card.style.background = randomGradient;
                                 card.style.color = 'white';
                                 card.style.transform = 'scale(1.05)';
+                                // Make all text white
+                                const allText = card.querySelectorAll('h4, p');
+                                allText.forEach(el => el.style.color = 'white');
                             }
                             
                             // Burst of confetti
@@ -510,6 +522,9 @@
                                 card.style.background = '';
                                 card.style.color = '';
                                 card.style.transform = '';
+                                // Reset text colors
+                                const allText = card.querySelectorAll('h3, h4, p, button');
+                                allText.forEach(el => el.style.color = '');
                                 triggeredElements.delete(index);
                             }
                         }
@@ -630,8 +645,9 @@
             document.head.appendChild(style);
         });
     </script>
-<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976d056d12665dcb',t:'MTc1NjQ4MDcwOC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'976d0b2c15175dcb',t:'MTc1NjQ4MDk0NC4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
 </html>
+
 
 
 
